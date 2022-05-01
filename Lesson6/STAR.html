@@ -2,42 +2,36 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>Stars</title>
 </head>
     <style>
-        .star:not(:checked) > input {
-            display: none;
+        .star1 {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-right: -50%;
+            transform: translate(-50%, -50%)
         }
-        .star:not(:checked) > label::before {
-            content: url(star0.png);
+        .star2 {
+            float: right;
+            content: url(star0.png);  
         }
-        .star > input:checked ~ label {
+        .star2:hover {
             content: url(star1.png);
         }
-        .star:not(:checked) > label:hover,
-        .star:not(:checked) > label:hover ~ label {
-            content: url(star1.png);
-        }
-        .star > input:checked + label:hover,
-        .star > input:checked + label:hover ~ label,
-        .star > input:checked ~ label:hover,
-        .star > input:checked ~ label:hover ~ label,
-        .star > label:hover ~ input:checked ~ label {
+        .star2:hover~.star2 {
             content: url(star1.png);
         }
     </style>
 <body>
-    <div class="star">
-        <input type="radio" value="1">
-        <label for="star1"></label>
-        <input type="radio" value="2">
-        <label for="star2"></label>    
-        <input type="radio" value="3">
-        <label for="star3"></label>  
-        <input type="radio" value="4">
-        <label for="star4"></label> 
-        <input type="radio" value="5">
-        <label for="star5"></label>	
+    <div class="star1">
+        <div class="star2"></div>
+        <div class="star2"></div>
+        <div class="star2"></div>
+        <div class="star2"></div>
+        <div class="star2"></div>
     </div>
 </body>
 </html>
+
