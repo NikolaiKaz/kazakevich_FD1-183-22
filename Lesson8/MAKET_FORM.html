@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    </head>
+    <style>
+        input[type=Search], textarea {
+            width: 100%;
+        }
+        .name1 {
+            float: left;
+            width: 13%;
+            margin-top: 6px;
+        }
+        .name2 {
+            float: left;
+            width: 87%;
+            margin-top: 6px;
+        }
+        .name3 {
+            float: left;
+        }
+        @media (max-width: 1000px) {
+            .name1 {
+                float: none;
+                width: 100%;
+            }
+            .name2 {
+                float: none;
+                width: 100%;
+            }
+            .name3 {
+                float: none;
+            }
+        }
+    </style>
+<body>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" target="blanc">
+        
+            <p>Для публикации вашей статьи заполните, пожалуйста, следующую форму:</p>
+            <div class="name">
+                <div class="name1">
+                    Название статьи:
+                </div>
+                <div class="name2">
+                    <input type="Search" name="Search">
+                </div>
+            </div>
+            <div class="name">
+                <div class="name1">
+                     Рубрика:
+                </div>
+                <div class="name2">
+                    <select name="heading" size="1">
+                        <option value="1">компьютерная техника</option>
+                        <option value="2">графика и дизайн</option>
+                        <option value="3">програмирование</option>  
+                    </select>
+                </div>
+            </div>
+            <div class="name">
+                <div class="name1">
+                    Публикация:
+                </div>
+                <div class="name2">
+                    <div class="name3"><input type="radio" name="radio" value="website">на сайте</div>
+                    <div class="name3"><input type="radio" name="radio" value="magazine">в журнале</div>
+                    <div class="name3"><input type="radio" name="radio" value="website and magazine">на сайте и в журнале</div>
+                </div>
+            </div>
+            <div class="name">
+                <div >
+                    Разрешить комментарии:
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="name">
+                <div >
+                    Текст статьи:
+                </div>
+                <div>
+                    <textarea name="text" id="textarea"></textarea>
+                    <button type="submit">опубликовать</button><br>
+                </div>
+            </div>
+    </form> 
+</body>
+</html>
